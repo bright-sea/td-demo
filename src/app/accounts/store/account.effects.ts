@@ -14,7 +14,7 @@ export class AccountEffects {
   accountFetch = this.actions$
     .ofType(AccountActions.FETCH_ACCOUNTS)
     .pipe(switchMap((action: AccountActions.FetchAccounts) => {
-      return this.httpClient.get<Account[]>('https://td-demo-2ed10.firebaseapp.com/accounts.json', {
+      return this.httpClient.get<Account[]>('https://td-demo-2ed10.firebaseio.com/accounts.json', {
         observe: 'body',
         responseType: 'json'
       });
@@ -32,7 +32,7 @@ export class AccountEffects {
     .ofType(AccountActions.STORE_ACCOUNTS)
     .pipe(withLatestFrom(this.store.select('accounts')),
       switchMap(([action, state]) => {
-        const req = new HttpRequest('PUT', 'https://td-demo-2ed10.firebaseapp.com/accounts.json', state.accounts, {reportProgress: true});
+        const req = new HttpRequest('PUT', 'https://td-demo-2ed10.firebaseio.com/accounts.json', state.accounts, {reportProgress: true});
         return this.httpClient.request(req);
       }));
 

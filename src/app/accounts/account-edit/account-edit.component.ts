@@ -51,8 +51,9 @@ export class AccountEditComponent implements OnInit {
 
   private initForm() {
     let accountName = '';
-    let accountImagePath = '';
-    let accountDescription = '';
+    let accountNumber = '';
+    let accountAmount = 0;
+    let accountCurrency = 'CND'
 
     if (this.editMode) {
       this.store.select('accounts')
@@ -60,15 +61,17 @@ export class AccountEditComponent implements OnInit {
         .subscribe((accountState: fromAccount.State) => {
           const account = accountState.accounts[this.id];
           accountName = account.name;
-          accountImagePath = account.imagePath;
-          accountDescription = account.description;
+          accountNumber = account.number;
+          accountAmount = account.amount;
+          accountCurrency = account.currency;
         });
     }
 
     this.accountForm = new FormGroup({
       'name': new FormControl(accountName, Validators.required),
-      'imagePath': new FormControl(accountImagePath, Validators.required),
-      'description': new FormControl(accountDescription, Validators.required),
+      'number': new FormControl(accountNumber, Validators.required),
+      'amount': new FormControl(accountAmount, Validators.required),
+      'currency': new FormControl(accountCurrency, Validators.required),
     });
   }
 

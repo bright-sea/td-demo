@@ -5,13 +5,8 @@
   class="list-group-item clearfix">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ account.name }}</h4>
-    <p class="list-group-item-text">{{ account.description }}</p>
-  </div>
-  <span class="pull-right">
-        <img
-          [src]="account.imagePath"
-          alt="{{ account.name }}"
-          class="img-responsive"
-          style="max-height: 50px;">
-      </span>
+    <h4 class="list-group-item-heading">{{ account.number }}</h4>
+    <h4 class="list-group-item-heading">{{ account.amount }}</h4>
+    <h4 class="list-group-item-heading">{{ account.currency }}</h4>
+   </div>
 </a>

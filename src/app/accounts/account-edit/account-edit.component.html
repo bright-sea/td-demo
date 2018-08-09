@@ -25,31 +25,36 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="imagePath">Image URL</label>
+            <label for="name">Number</label>
             <input
               type="text"
-              id="imagePath"
-              formControlName="imagePath"
-              class="form-control"
-              #imagePath>
+              id="number"
+              formControlName="number"
+              class="form-control">
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <img [src]="imagePath.value" class="img-responsive">
+          <div class="form-group">
+            <label for="name">amount</label>
+            <input
+              type="text"
+              id="amount"
+              formControlName="amount"
+              class="form-control">
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="description">Description</label>
-            <textarea
+            <label for="name">currency</label>
+            <input
               type="text"
-              id="description"
-              class="form-control"
-              formControlName="description"
-              rows="6"></textarea>
+              id="curremcy"
+              formControlName="currency"
+              class="form-control">
           </div>
         </div>
       </div>

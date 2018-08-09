@@ -1,11 +1,13 @@
 export class Account {
   public name: string;
-  public description: string;
-  public imagePath: string;
+  public number: string;
+  public amount: number;
+  public currency: string;
 
-  constructor(name: string, desc: string, imagePath: string) {
+  constructor(name: string, number: string, amount: number, currency: string) {
     this.name = name;
-    this.description = desc;
-    this.imagePath = imagePath;
+    this.number = number;
+    this.amount = amount;
+    this.currency = currency;
   }
 }

@@ -13,13 +13,15 @@ export interface State {
 const initialState: State = {
   accounts: [
     new Account(
-     'Tasty Schnitzel',
-     'A super-tasty Schnitzel - just awesome!',
-     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG'
+     'Checking',
+     '230170989999',
+     10000.00,
+     'CND'
     ),
-    new Account('Big Fat Burger',
-      'What else you need to say?',
-      'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+    new Account('Saving',
+      '326565273333',
+      23257656.89,
+      'USD'
       )
   ]
 };
